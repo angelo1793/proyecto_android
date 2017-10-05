@@ -116,14 +116,14 @@
             android:layout_width="128dp"
             android:layout_height="61dp"
             android:backgroundTint="@color/colorPrimaryDark"
-            android:text="Button" />
+            android:text="Cambiar nombre" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="128dp"
             android:layout_height="61dp"
             android:backgroundTint="@color/colorPrimaryDark"
-            android:text="Button" />
+            android:text="Cambiar imagen" />
 
         <Button
             android:id="@+id/button3"

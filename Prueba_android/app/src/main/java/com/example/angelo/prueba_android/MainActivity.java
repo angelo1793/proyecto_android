@@ -48,9 +48,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button1:
                 Toast.makeText(getApplicationContext(), "Opcion boton1", Toast.LENGTH_SHORT).show();
+                text.setText("mi nonmbre cambio :)");
                 break;
             case R.id.button2:
                 Toast.makeText(getApplicationContext(), "Opcion boton2", Toast.LENGTH_SHORT).show();
+                andy.setImageResource(R.drawable.button_image);
                 break;
             case R.id.button3:
                 Toast.makeText(getApplicationContext(), "Opcion boton3", Toast.LENGTH_SHORT).show();
