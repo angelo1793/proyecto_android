@@ -58,33 +58,30 @@
         android:id="@+id/buttonP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/boton"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="373dp"
-        tools:layout_constraintLeft_creator="1"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/boton"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/ButtonImage"
-
-        android:layout_width="126dp"
-        android:layout_height="109dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="69dp"
-        android:backgroundTint="@android:color/background_light"
-        android:src="@drawable/button_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.649"
-        app:layout_constraintLeft_toRightOf="@+id/imageP"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
+
+    <ImageButton
+        android:id="@+id/ButtonImage"
+        android:layout_width="126dp"
+        android:layout_height="109dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/background_light"
+        android:src="@drawable/button_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
 
     <ImageView
         android:id="@+id/imageP"
@@ -118,16 +115,21 @@
             android:id="@+id/button1"
             android:layout_width="128dp"
             android:layout_height="61dp"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:text="Button" />
+
         <Button
             android:id="@+id/button2"
             android:layout_width="128dp"
             android:layout_height="61dp"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:text="Button" />
+
         <Button
             android:id="@+id/button3"
             android:layout_width="128dp"
             android:layout_height="61dp"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:text="Button" />
 
     </LinearLayout>
