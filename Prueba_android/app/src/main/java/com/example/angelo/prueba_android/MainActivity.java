@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView text;
     ImageView andy;
     Button buttonP,button1,button2,button3;
+    ImageButton buttonImage;
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +30,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             button1=(Button) findViewById(R.id.button1);
             button2=(Button) findViewById(R.id.button2);
             button3=(Button) findViewById(R.id.button3);
+            buttonImage=(ImageButton) findViewById(R.id.ButtonImage);
             //Habilitacion del metodo OnClickListener
             buttonP.setOnClickListener(this);
             button1.setOnClickListener(this);
             button2.setOnClickListener(this);
             button3.setOnClickListener(this);
             andy.setOnClickListener(this);
+            buttonImage.setOnClickListener(this);
 
     }
     @Override
@@ -52,8 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(getApplicationContext(), "Opcion boton3", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.imageP:
-                Toast.makeText(getApplicationContext(), "Inagen de andy", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Solo soy una imagen de andy", Toast.LENGTH_LONG).show();
                 break;
+            case R.id.ButtonImage:
+                Toast.makeText(getApplicationContext(),"soy un ImageButton",Toast.LENGTH_LONG);
         }
     }
 }
