@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
             //Creando los objetos y asociandolos al codigo java
             etext1=(EditText) findViewById(R.id.textInput);
-            etext2=(EditText) findViewById(R.id.textInput2);
+
             text=(TextView) findViewById(R.id.textName);
             andy=(ImageView) findViewById(R.id.imageP);
             buttonP=(Button) findViewById(R.id.buttonP);
@@ -45,7 +45,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.buttonP:
-                Toast.makeText(getApplicationContext(), "Opcion principal señalada", Toast.LENGTH_SHORT).show();
+                String textHint=etext1.getText().toString();
+                Intent intent= new Intent(this,Activity2.class);
+                intent.putExtra("DATO",textHint);
+                startActivity(intent);
                 break;
             case R.id.button1:
                 text.setText("mi nonmbre cambio :)");
@@ -54,10 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 andy.setImageResource(R.drawable.button_image);
                 break;
             case R.id.button3:
-                Intent intent= new Intent(this,Activity2.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Opcion 3 ", Toast.LENGTH_LONG).show();
                 break;
-
             case R.id.imageP:
                 Toast.makeText(getApplicationContext(), "Solo soy una imagen de andy", Toast.LENGTH_LONG).show();
                 break;
