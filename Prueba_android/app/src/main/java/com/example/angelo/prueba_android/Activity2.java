@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +22,7 @@ public class Activity2 extends AppCompatActivity {
     TextView etext1;
     RadioGroup grupo;
     Spinner spinner;
+    ToggleButton toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class Activity2 extends AppCompatActivity {
         setContentView(R.layout.activity_2);
         etext1=(TextView) findViewById(R.id.textName2);
         spinner=(Spinner)findViewById(R.id.spinner);
+        toggle=(ToggleButton) findViewById(R.id.toggle);
         //Obtenniendo los datos mandados en el putExtra del intent
         Intent intent=getIntent();
         Bundle bundle=intent.getExtras();
@@ -55,6 +59,16 @@ public class Activity2 extends AppCompatActivity {
         list.add("Steve Jobs");
         list.add("Mark Zucaritas");
         list.add("Larry Page");
+        //Detectndo cambios en el ToggleButton
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    Toast.makeText(Activity2.this,"ToggleButton selecionado",Toast.LENGTH_LONG).show();
+                }else
+                    Toast.makeText(Activity2.this,"ToggleButton apagado",Toast.LENGTH_LONG).show();
+            }
+        });
 
         ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
